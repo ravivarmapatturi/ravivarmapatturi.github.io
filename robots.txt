@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://ravivarmapatturi.github.io/al-folio/sitemap.xml
+Sitemap: https://ravivarmapatturi.github.io/sitemap.xml
