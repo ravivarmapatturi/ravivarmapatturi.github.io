@@ -6,7 +6,7 @@ subtitle: AI Research Engineer | Deep Learning | NLP | GenAI Applications
 
 profile:
   align: right
-  image: /assets/Images/PROFILE_.jpeg
+  image: ravivarmapatturi.github.io/assets/Images/PROFILE_.jpeg
   image_circular: false
   more_info: >
     <p>Bengaluru, India 560065</p>
@@ -56,8 +56,8 @@ At Boltzmann Labs, I develop and deploy state-of-the-art AI solutions:
 ### 🎓 Education
 
 **B.Tech in Electronics and Communication Engineering**  
-RAJIV GANDHI UNIVERSITY OF KNOWLEDGE AND TECHNOLOGIES, NUZVID (2019 - 2023)  (https://rguktn.ac.in/)
-CGPA: 9.0/10
+JNTUH College of Engineering, Hyderabad (2019 - 2023)  
+CGPA: 8.8/10
 
 ### 🌐 Let's Collaborate
 
