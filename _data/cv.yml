@@ -6,7 +6,7 @@
     - name: Date of Birth
       value: 6th August 2001
     - name: Languages
-      value: English, Telugu , Kannada 
+      value: English, Telugu , Kannada
 
 - title: Education
   type: time_table
