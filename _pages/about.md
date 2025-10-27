@@ -6,7 +6,7 @@ subtitle: AI Research Engineer | Deep Learning | NLP | GenAI Applications
 
 profile:
   align: right
-  image: assets/Images/PROFILE.png
+  image: PROFILE.png
   image_circular: false
   more_info: >
     <p>Bengaluru, India 560065</p>
