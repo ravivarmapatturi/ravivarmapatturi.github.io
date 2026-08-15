@@ -1,7 +1,7 @@
 ---
 layout: about
 title: about
-permalink: /
+permalink: /about/
 subtitle: AI Engineer | Generative AI, Agentic AI, LLMs, RAG | 4+ Years
 
 profile:
