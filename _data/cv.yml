@@ -2,96 +2,131 @@
   type: map
   contents:
     - name: Full Name
-      value: RAVIVARMA PATTURI
-    - name: Date of Birth
-      value: 6th August 2001
+      value: Ravivarma Patturi
+    - name: Location
+      value: Bengaluru, India
+    - name: Email
+      value: patturiravivarma@gmail.com
     - name: Languages
-      value: English, Telugu , Kannada
+      value: English, Telugu, Kannada
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: B.Tech, Electronics and Communication Engineering
+      institution: Rajiv Gandhi University of Knowledge and Technologies
+      year: 2019 - 2023
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
-      description:
-        - Description 1.
-        - Description 2.
+        - CGPA 9.0/10
+    - title: Gen AI Pinnacle Program
+      institution: Analytics Vidhya
+      year: 2024 - 2025
+    - title: Neural Networks & Deep Learning
+      institution: Coursera
+    - title: PyTorch for Deep Learning with Python Bootcamp
+      institution: Udemy
 
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: AI Engineer
+      institution: Autonomize AI
+      year: Feb 2026 - Present
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
+        - title: Genesis AI Studio - AI platform for building and deploying agents
           contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+            - Designed and implemented a Recursive Language Model (RLM) architecture for hierarchical reasoning through Master-Sub LLM collaboration, alongside ReAct and Plan-and-Execute workflows.
+            - Built the orchestration workflow using Temporal, enabling scalable execution of production-grade AI agents.
+        - title: SOP Reasoner for Automated Claims Adjudication (Multi-Agent System)
+          contents:
+            - Developed a multi-agent AI system that automates healthcare claims adjudication by reasoning over Standard Operating Procedures, reducing adjudication cost by 80%.
+            - Built a Knowledge Graph Generation Agent and an Adjudication Agent producing explainable, step-by-step decisions (Approve/Reject/Pend).
+        - title: Healthcare AI - Benefits Digitization
+          contents:
+            - Delivered a proof of concept for benefits digitization within a 14-day timeline, converted into a full-scale production project.
+            - Built AI pipelines to extract structured benefit information from policy documents using LLMs and Knowledge Graphs.
+        - title: Clinical AI Expression & Semantic Search
+          contents:
+            - Built an NLP pipeline converting natural language business requests into structured logical expressions for campaign creation.
+            - Indexed 70,000+ healthcare concepts using Azure AI Search, improving retrieval quality with Cross-Encoder reranking.
+        - title: Healthcare Inquiry Classification
+          contents:
+            - Developed a ModernBERT-based text classification model for healthcare inquiry categorization, addressing class imbalance via synthetic data generation.
+
+    - title: AI Research Engineer
+      institution: Boltzmann Labs Pvt Ltd
+      year: Jul 2023 - Jan 2026
       description:
-        - Description 1.
-        - Description 2.
+        - title: AI Modelling of Battery Management System
+          contents:
+            - Implemented sequential neural networks (RNN, LSTM, GRU) achieving 99% reliability in SOC predictions.
+            - Applied dynamic quantization, reducing model size by 50% and improving runtime latency by 2x for edge deployment.
+            - Designed a novel surrogate model incorporating physics into neural networks for improved interpretability.
+        - title: Automated LLM-Driven Agentic Workflow for RTL Verification
+          contents:
+            - Developed an LLM-powered agentic verification workflow to extract functional intent from IC specifications and generate coverage-aligned test plans.
+            - Integrated the AI agent into Cadence Xcelium UVM flows, accelerating coverage closure.
+        - title: PoC for Battery Chemistry
+          contents:
+            - Developed a domain-specific RAG system using LangChain, Mistral API, and ChromaDB for battery research.
+            - Fine-tuned LLaMA-3.2-1B using LoRA on NVIDIA L40S GPUs for chemically valid crystal structure generation.
+        - title: Automation Workflow for GROMACS
+          contents:
+            - Engineered a GPU-accelerated, Dockerized MD simulation workflow using GROMACS and OpenMM, reducing environment setup time by 40%.
+            - Deployed the pipeline as a FastAPI microservice on AWS EKS for scalable, reproducible simulations.
 
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
+    - title: Deep Learning Research Intern
+      institution: Boltzmann Labs
+      year: Nov 2022 - Jun 2023
       description:
+        - Contributed to Boltchem for small-molecule drug discovery, building robust ML models.
+        - Researched multi-objective optimization to improve multiple molecular properties simultaneously.
 
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
+- title: Projects
   type: time_table
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+    - title: <a href="https://github.com/ravivarmapatturi/qa_rag_application">Regulatory QA RAG Chatbot</a>
+      description: GPT-4o-powered RAG chatbot with hybrid retrieval, query rewriting, and memory-augmented context; deployed on Kubernetes.
+    - title: <a href="https://github.com/ravivarmapatturi/Finance_Agent">AI-Powered Financial Reporting Agent</a>
+      description: LangGraph/LangChain agent that analyzes financial data and benchmarks competitors via the Tavily Search API.
+    - title: <a href="https://github.com/ravivarmapatturi/Traffic_Volume_Prediction_Hackathon">Traffic Volume Prediction</a>
+      description: XGBoost forecasting model with weather/time/holiday feature engineering - Top 10, MachineHack Great Indian Hackathon 2024.
+    - title: <a href="https://ravivarmapatturi.github.io/NeuralMastery/">NeuralMastery</a>
+      year: ongoing
+      description: An AI learning platform covering math foundations, deep learning, agents, and production ML systems.
 
 - title: Honors and Awards
   type: time_table
   contents:
-    - year: 1921
+    - year: 2024
       items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
+        - Top 10, MachineHack Great Indian Hackathon - Traffic Volume Prediction Challenge
+    - year: ongoing
       items:
-        - Max Planck Medal
+        - Top 100, Deep-ML global rankings
 
-- title: Academic Interests
+- title: Currently Exploring
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: Multi-Agent Systems
       items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+        - Collaborative problem-solving, autonomous decision-making, and complex task coordination using LLMs.
+    - title: Reinforcement Learning
       items:
-        - Description 1.
-        - Description 2.
+        - Policy gradients, actor-critic methods, and deep Q-networks for intelligent decision-making systems.
 
-- title: Other Interests
-  type: list
+- title: Technical Skills
+  type: nested_list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - title: Programming & Databases
+      items:
+        - Python, C, C++, MySQL
+    - title: Generative AI
+      items:
+        - LangChain, LlamaIndex, LangGraph, RAG, Agents, Prompt Engineering, Fine-tuning, Temporal
+    - title: Machine & Deep Learning
+      items:
+        - PyTorch, TensorFlow, Hugging Face Transformers, Scikit-learn, NLTK, spaCy
+    - title: Deployment & DevOps
+      items:
+        - Docker, Kubernetes, FastAPI, AWS, Streamlit, Git

@@ -6,3 +6,6 @@ repo_description_lines_max: 2
 github_repos:
   - ravivarmapatturi/Finance_Agent
   - ravivarmapatturi/qa_rag_application
+  - ravivarmapatturi/Traffic_Volume_Prediction_Hackathon
+  - ravivarmapatturi/sentiment_classification_using_nlp
+  - ravivarmapatturi/NeuralMastery

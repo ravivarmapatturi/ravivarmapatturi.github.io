@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: AI Research Engineer | Deep Learning | NLP | GenAI Applications
+subtitle: AI Engineer | Generative AI, Agentic AI, LLMs, RAG | 4+ Years
 
 profile:
   align: right
@@ -24,34 +24,40 @@ latest_posts:
 
 Hi, I'm **Ravivarma Patturi** 👋
 
-AI Research Engineer at **Boltzmann Labs**, specializing in **Deep Learning, NLP, Generative AI, and Data Science**.
+AI/ML Engineer with 4+ years of experience designing and deploying production-grade **Generative AI, Agentic AI, and NLP systems** — from LLM-driven multi-agent platforms and RAG pipelines to deep learning models — for leading U.S. healthcare payers, providers, and product-focused AI companies.
 
 ### 🔬 Current Work
 
-At Boltzmann Labs, I develop and deploy state-of-the-art AI solutions:
+I'm an **AI Engineer at [Autonomize AI](https://www.autonomize.ai/)**, building **Genesis AI Studio**, a platform for building and deploying production-grade AI agents:
 
-- **Battery Management Systems**: Implemented sequential neural networks (TCN, RNN, LSTM, GRU) achieving **99% reliability** in SOC predictions. Quantized models using dynamic quantization, reducing model size by **50%** while maintaining accuracy.
+- **Recursive Language Model (RLM) architecture**: Designed hierarchical reasoning through Master–Sub LLM collaboration, integrated alongside ReAct and Plan-and-Execute workflows, orchestrated with Temporal.
 
-- **LLM Fine-tuning**: Fine-tuned **LLaMA 3.2 1B** model on atomistic crystal structure data using LoRA techniques on NVIDIA L40S GPUs for molecular property prediction.
+- **SOP Reasoner for Claims Adjudication**: Built a multi-agent system that automates healthcare claims adjudication by reasoning over Standard Operating Procedures, cutting adjudication cost by **80%** with fully explainable, step-by-step decisions.
 
-- **Generative AI Applications**: Created a Regulatory QA RAG Chatbot using **GPT-4o** with advanced chunking, parsing, and prompting strategies. Automated SystemVerilog Assertion (SVA) generation with **80% syntactic validity**.
+- **Benefits Digitization**: Delivered a proof of concept for a leading U.S. healthcare organization in **14 days**, later converted into a full-scale production project, extracting structured benefit information from policy documents using LLMs and Knowledge Graphs.
 
-- **Molecular AI**: Implemented property prediction pipelines improving accuracy by **15%**. Dockerized and accelerated Molecular Dynamics workflows using GROMACS and OpenMM.
+- **Clinical Semantic Search**: Indexed 70,000+ healthcare concepts with Azure AI Search and Cross-Encoder reranking to automate structured-expression generation for campaign creation.
+
+I also build **[NeuralMastery](https://ravivarmapatturi.github.io/NeuralMastery/)**, an AI learning platform taking learners from math foundations through deep learning, agents, and production ML systems.
+
+### 🕰️ Previously
+
+**AI Research Engineer at Boltzmann Labs** (2023–2026), where I built sequential neural networks (RNN/LSTM/GRU) for Battery Management Systems achieving 99% SOC-prediction reliability, developed an LLM-powered agentic workflow for RTL verification integrated into Cadence Xcelium UVM flows, and built domain-specific RAG systems and fine-tuned LLMs (LLaMA-3.2-1B with LoRA) for battery materials research.
 
 ### 🚀 Achievements
 
-- **Deep-ML**: Ranked **Top 150** globally
+- **Deep-ML**: Ranked **Top 100** globally
 - **MachineHack**: **Top 10** finish in Great Indian Hackathon 2024 - Traffic Prediction Challenge
 - **YouTube**: Creator of [Neural Mastery](https://youtube.com/@neuralmastery) channel
 - **Open Source**: Active contributor with multiple AI/ML projects
 
 ### 🛠️ Technical Skills
 
+**Generative AI**: LangChain, LlamaIndex, LangGraph, RAG, Agents, Prompt Engineering, Fine-tuning, Temporal  
 **Deep Learning**: PyTorch, TensorFlow, Hugging Face Transformers  
-**NLP & GenAI**: LangChain, LlamaIndex, RAG, Prompt Engineering, LangGraph  
 **ML Tools**: Scikit-learn, Feature Engineering, Hyperparameter Tuning  
-**Deployment**: Docker, FastAPI, AWS, Streamlit, Git  
-**Languages**: Python, C, C++
+**Deployment**: Docker, Kubernetes, FastAPI, AWS, Streamlit, Git  
+**Languages & Data**: Python, C, C++, MySQL
 
 ### 🎓 Education
 
