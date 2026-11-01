@@ -1,0 +1,161 @@
+---
+const skillGroups = [
+  {
+    category: "GenAI & Agentic Systems",
+    description: "Production agent architectures, multi-agent coordination, structured reasoning, and retrieval.",
+    skills: [
+      "Large Language Models (LLMs)",
+      "Multi-Agent Systems",
+      "LangGraph & LangChain",
+      "LlamaIndex",
+      "Recursive Language Models (RLM)",
+      "ReAct & Plan-and-Execute",
+      "Hybrid RAG (Dense + BM25)",
+      "Cross-Encoder Reranking",
+      "Query Rewriting",
+      "Knowledge Graphs",
+      "Fine-Tuning (LoRA)",
+      "Prompt Engineering"
+    ]
+  },
+  {
+    category: "Machine Learning & Deep Learning",
+    description: "Neural network architecture design, representation learning, and domain-specific modeling.",
+    skills: [
+      "PyTorch",
+      "TensorFlow",
+      "Hugging Face Transformers",
+      "ModernBERT",
+      "RNN / LSTM / GRU",
+      "CNNs & Autoencoders",
+      "XGBoost",
+      "scikit-learn",
+      "NLTK & spaCy",
+      "Physics-Informed Surrogates",
+      "Multi-Objective Optimization",
+      "Hyperparameter Tuning"
+    ]
+  },
+  {
+    category: "Inference & Edge AI",
+    description: "Quantization, latency minimization, and client-side web inference execution.",
+    skills: [
+      "Dynamic Quantization (INT8)",
+      "ONNX Runtime",
+      "In-Browser Speech & Audio",
+      "WebAssembly / Pyodide",
+      "IndicTrans2 Translation",
+      "Edge Model Benchmarking",
+      "NVIDIA L40S GPU Workflows"
+    ]
+  },
+  {
+    category: "Backend & MLOps Infrastructure",
+    description: "Distributed workflow orchestration, containerization, search indexes, and cloud APIs.",
+    skills: [
+      "Python (Core & Async)",
+      "FastAPI Microservices",
+      "Temporal Workflow Orchestration",
+      "Docker & Containerization",
+      "Kubernetes (AWS EKS)",
+      "Azure AI Search",
+      "ChromaDB & Vector Stores",
+      "AWS & Cloud Services",
+      "Streamlit UI",
+      "Git & CI/CD Actions",
+      "Linux Systems"
+    ]
+  }
+];
+---
+
+<section id="skills" class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">
+        <span>05</span>
+        <span>/</span>
+        <span>Capabilities</span>
+      </div>
+      <h2 class="section-title">Technical Skills</h2>
+      <p class="section-desc">
+        A battle-tested stack spanning multi-agent orchestration, transformer fine-tuning, edge quantization, and production cloud infrastructure.
+      </p>
+    </div>
+
+    <div class="skills-grid">
+      {skillGroups.map((group) => (
+        <div class="skill-category-card card">
+          <div class="skill-category-header">
+            <h3 class="skill-category-title">{group.category}</h3>
+            <p class="skill-category-desc">{group.description}</p>
+          </div>
+
+          <div class="skills-tag-list">
+            {group.skills.map((skill) => (
+              <span class="skill-tag">{skill}</span>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  @media (max-width: 820px) {
+    .skills-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+  .skill-category-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  .skill-category-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+    padding-bottom: 0.875rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .skill-category-title {
+    font-size: 1.1875rem;
+    font-weight: 700;
+    color: var(--text-main);
+    letter-spacing: -0.01em;
+  }
+  .skill-category-desc {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+  .skills-tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .skill-tag {
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--text-main);
+    background-color: var(--bg-subtle);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 0.375rem 0.625rem;
+    transition: all 0.15s ease;
+  }
+  .skill-tag:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background-color: var(--accent-light);
+  }
+</style>

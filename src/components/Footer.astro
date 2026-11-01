@@ -1,0 +1,125 @@
+---
+const currentYear = 2026;
+
+const socialLinks = [
+  { name: "GitHub", href: "https://github.com/ravivarmapatturi" },
+  { name: "LinkedIn", href: "https://linkedin.com/in/ravivarma-patturi" },
+  { name: "X", href: "https://x.com/NeuralMastery" },
+  { name: "Hugging Face", href: "https://huggingface.co/ravivarmapatturi" },
+  { name: "YouTube", href: "https://www.youtube.com/@neuralmastery" },
+  { name: "Neural Mastery", href: "https://neuralmasteryai.com" },
+  { name: "InferEdge AI", href: "https://inferedgeai.com" }
+];
+---
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-info">
+      <div class="footer-brand">
+        <span class="footer-monogram">RP</span>
+        <span class="footer-name">Ravivarma Patturi</span>
+      </div>
+      <p class="footer-tagline">
+        AI Engineer: production agentic systems &amp; edge inference. Based in Bengaluru, India.
+      </p>
+      <p class="footer-copy">
+        &copy; {currentYear} Ravivarma Patturi. Crafted with Astro. No trackers.
+      </p>
+    </div>
+
+    <div class="footer-links-group">
+      <span class="footer-links-title">Connect &amp; Explore</span>
+      <div class="footer-links">
+        {socialLinks.map((item) => (
+          <a href={item.href} target="_blank" rel="noopener noreferrer" class="footer-link">
+            {item.name}
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background-color: var(--bg-subtle);
+    border-top: 1px solid var(--border);
+    padding: 4rem 0 3rem;
+    margin-top: auto;
+  }
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+  .footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-width: 440px;
+  }
+  .footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .footer-monogram {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: var(--radius-sm);
+    background: var(--accent-light);
+    color: var(--accent);
+    border: 1px solid var(--accent-border);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+  .footer-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-main);
+  }
+  .footer-tagline {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+  .footer-copy {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-faint);
+    margin-top: 0.5rem;
+  }
+  .footer-links-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+  }
+  .footer-links-title {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-faint);
+  }
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.25rem;
+    max-width: 420px;
+  }
+  .footer-link {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    transition: color 0.15s ease;
+  }
+  .footer-link:hover {
+    color: var(--accent);
+  }
+</style>

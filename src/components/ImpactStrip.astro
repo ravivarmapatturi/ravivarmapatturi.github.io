@@ -1,0 +1,95 @@
+---
+const impacts = [
+  {
+    metric: "14 Days",
+    label: "PoC to Production",
+    detail: "Delivered healthcare benefits digitization PoC in 14 days, converting directly into a full-scale enterprise production engagement."
+  },
+  {
+    metric: "80%",
+    label: "Lower Adjudication Cost",
+    detail: "Built multi-agent SOP reasoning system that automates claims adjudication against business rules with explainable audit trails."
+  },
+  {
+    metric: "70,000+",
+    label: "Healthcare Concepts Indexed",
+    detail: "Clinical AI semantic search pipeline with Azure AI Search and cross-encoder reranking for natural-language expression extraction."
+  },
+  {
+    metric: "2× Faster",
+    label: "50% Smaller at Edge",
+    detail: "Quantized deep sequential models with <1.2% MAPE deviation, enabling real-time edge battery management deployment."
+  }
+];
+---
+
+<section class="impact-section" aria-label="Key Impact Metrics">
+  <div class="container">
+    <div class="impact-grid">
+      {impacts.map((item) => (
+        <div class="impact-item">
+          <div class="impact-metric">{item.metric}</div>
+          <div class="impact-label">{item.label}</div>
+          <p class="impact-detail">{item.detail}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .impact-section {
+    background-color: var(--bg-subtle);
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .impact-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+  @media (max-width: 900px) {
+    .impact-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+  }
+  @media (max-width: 540px) {
+    .impact-grid {
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+  }
+  .impact-item {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-sm);
+  }
+  .impact-metric {
+    font-size: 2.25rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--accent);
+    line-height: 1.1;
+    margin-bottom: 0.375rem;
+  }
+  .impact-label {
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-main);
+    margin-bottom: 0.625rem;
+  }
+  .impact-detail {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: var(--text-muted);
+    margin-top: auto;
+  }
+</style>
