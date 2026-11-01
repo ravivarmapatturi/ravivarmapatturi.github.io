@@ -1,0 +1,241 @@
+---
+const projects = [
+  {
+    title: "qa_rag_application",
+    name: "Regulatory QA RAG Chatbot",
+    badge: "Enterprise RAG",
+    github: "https://github.com/ravivarmapatturi/qa_rag_application",
+    problem: "Regulatory compliance and policy documents are dense and complex. Generic search tools often return fragmented clauses or hallucinated answers, creating significant compliance risks.",
+    approach: "Architected a production-ready conversational RAG assistant using GPT-4o. Integrated dense vector search with sparse BM25 retrieval (hybrid retrieval), cross-encoder reranking, intelligent query rewriting, and conversation memory. Fully containerized with Docker for Kubernetes deployment.",
+    result: "Delivers sub-second, highly factual query resolution with source attribution and citations, eliminating manual document scanning time.",
+    tech: ["Python", "GPT-4o", "LangChain", "Hybrid Retrieval", "Docker", "Kubernetes", "Vector DB"]
+  },
+  {
+    title: "Finance_Agent",
+    name: "Financial Performance Reporting Agent",
+    badge: "Multi-Agent System",
+    github: "https://github.com/ravivarmapatturi/Finance_Agent",
+    problem: "Synthesizing quarterly financial disclosures, SEC filings, and competitor metrics is an exhaustive manual undertaking that delays strategic investment reporting.",
+    approach: "Designed a multi-agent workflow orchestrated with LangGraph and OpenAI. Implemented specialized agents for financial statement extraction, web-scale competitive benchmarking via Tavily Search, and structured narrative generation, wrapped in a Streamlit UI with human-in-the-loop review.",
+    result: "Automated end-to-end financial analysis reports with competitor comparison charts and iterative narrative refinement in seconds.",
+    tech: ["LangGraph", "OpenAI", "Tavily Search", "Streamlit", "Pandas", "Python"]
+  },
+  {
+    title: "Traffic_Volume_Prediction_Hackathon",
+    name: "Municipal Traffic Volume Forecasting",
+    badge: "Top 10 MachineHack 2024",
+    github: "https://github.com/ravivarmapatturi/Traffic_Volume_Prediction_Hackathon",
+    problem: "Predicting municipal traffic congestion requires capturing complex cyclical patterns influenced by severe weather changes, irregular holiday calendars, and sudden peak events.",
+    approach: "Engineered high-signal spatio-temporal features, cyclic time encodings, and weather interaction variables. Developed an ensemble XGBoost model tuned with stratified cross-validation and hyperparameter optimization.",
+    result: "Secured a Top 10 national ranking among hundreds of data science competitors at the MachineHack Great Indian Hackathon 2024.",
+    tech: ["XGBoost", "Scikit-Learn", "Feature Engineering", "Pandas", "NumPy"]
+  },
+  {
+    title: "NeuralMastery",
+    name: "Neural Mastery Platform Engine",
+    badge: "Learning Platform & OSS",
+    github: "https://github.com/ravivarmapatturi/NeuralMastery",
+    demo: "https://neuralmasteryai.com",
+    problem: "Most AI learners face friction between theoretical lectures and practical code verification, lacking immediate in-browser execution or visual intuition.",
+    approach: "Built a modern interactive education platform featuring 1,800+ curriculum pages, in-browser client-side Python execution via PyScript/WebAssembly, interactive visual labs, and automated progress tracking.",
+    result: "Created a scalable self-learning platform educating thousands of engineers on deep learning, transformer internals, and agentic workflows.",
+    tech: ["Python", "PyScript", "WebAssembly", "TypeScript", "Educational Labs"]
+  }
+];
+---
+
+<section id="projects" class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">
+        <span>03</span>
+        <span>/</span>
+        <span>Code & Architecture</span>
+      </div>
+      <h2 class="section-title">Selected Projects</h2>
+      <p class="section-desc">
+        Four flagship open-source architectures demonstrating agent orchestration, advanced retrieval, edge-ready ML pipelines, and interactive systems.
+      </p>
+    </div>
+
+    <div class="projects-grid">
+      {projects.map((proj) => (
+        <article class="project-card card">
+          <div class="project-top">
+            <div class="project-title-group">
+              <span class="badge">{proj.badge}</span>
+              <h3 class="project-name">{proj.name}</h3>
+              <code class="project-repo-name">{proj.title}</code>
+            </div>
+            
+            <div class="project-links">
+              {proj.demo && (
+                <a href={proj.demo} target="_blank" rel="noopener noreferrer" class="icon-link" aria-label={`Live site for ${proj.name}`}>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+              )}
+              <a href={proj.github} target="_blank" rel="noopener noreferrer" class="icon-link" aria-label={`GitHub repository for ${proj.title}`}>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-body">
+            <div class="par-item">
+              <span class="par-label">Problem:</span>
+              <p class="par-text">{proj.problem}</p>
+            </div>
+            <div class="par-item">
+              <span class="par-label">Approach:</span>
+              <p class="par-text">{proj.approach}</p>
+            </div>
+            <div class="par-item">
+              <span class="par-label">Result:</span>
+              <p class="par-text highlight">{proj.result}</p>
+            </div>
+          </div>
+
+          <div class="project-bottom">
+            <div class="tech-chips">
+              {proj.tech.map((t) => (
+                <span class="chip">{t}</span>
+              ))}
+            </div>
+
+            <a href={proj.github} target="_blank" rel="noopener noreferrer" class="github-action-link">
+              <span>View Repository</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+  }
+  @media (max-width: 900px) {
+    .projects-grid {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 1.75rem;
+    }
+  }
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem;
+    height: 100%;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  .project-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .project-title-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.375rem;
+  }
+  .project-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-main);
+    letter-spacing: -0.015em;
+  }
+  .project-repo-name {
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    color: var(--text-faint);
+  }
+  .project-links {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .icon-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.375rem;
+    border-radius: var(--radius-sm);
+    color: var(--text-muted);
+    transition: color 0.15s ease, background-color 0.15s ease;
+  }
+  .icon-link:hover {
+    color: var(--accent);
+    background-color: var(--accent-light);
+  }
+  .project-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+    flex-grow: 1;
+  }
+  .par-item {
+    font-size: 0.875rem;
+    line-height: 1.55;
+  }
+  .par-label {
+    font-weight: 700;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 0.125rem;
+  }
+  .par-text {
+    color: var(--text-muted);
+  }
+  .par-text.highlight {
+    color: var(--text-main);
+    font-weight: 500;
+  }
+  .project-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding-top: 1.25rem;
+    border-top: 1px dashed var(--border);
+  }
+  .tech-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.375rem;
+  }
+  .github-action-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--accent);
+    transition: gap 0.15s ease;
+    align-self: flex-start;
+  }
+  .github-action-link:hover {
+    color: var(--accent-hover);
+    gap: 0.5rem;
+  }
+</style>

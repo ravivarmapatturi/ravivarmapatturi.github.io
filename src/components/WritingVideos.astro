@@ -1,0 +1,198 @@
+---
+const videos = [
+  {
+    id: "UlahrrEk9Ns",
+    title: "Introduction to Evaluation Metrics in Telugu | Machine Learning",
+    description: "Deep dive into classification metrics — Precision, Recall, F1-Score, ROC-AUC, and confusion matrix interpretation for production ML systems."
+  },
+  {
+    id: "UgBqCyuCQKw",
+    title: "Backward Propagation in Telugu | Deep Learning",
+    description: "Step-by-step mathematical breakdown and derivation of the chain rule, gradient updates, and backpropagation in deep neural networks."
+  },
+  {
+    id: "EXP_3C7me_k",
+    title: "Normalization vs Standardization in Telugu | Machine Learning",
+    description: "Clear architectural guidance on feature scaling techniques, mathematical formulations, and when to use MinMax vs StandardScaler."
+  }
+];
+---
+
+<section id="writing-videos" class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">
+        <span>04</span>
+        <span>/</span>
+        <span>Education & Media</span>
+      </div>
+      <h2 class="section-title">Writing &amp; Videos</h2>
+      <p class="section-desc">
+        Demystifying AI/ML foundations, agentic engineering, and deep learning architectures through structured platform writing and video tutorials.
+      </p>
+    </div>
+
+    <div class="blog-spotlight card">
+      <div class="spotlight-content">
+        <span class="badge">Interactive Curricula</span>
+        <h3 class="spotlight-title">Neural Mastery Platform &amp; Engineering Blog</h3>
+        <p class="spotlight-text">
+          Over 1,800+ pages of deep engineering guides covering neural network internals, large language model fine-tuning with LoRA, agentic orchestration, and client-side browser inference with interactive Python execution.
+        </p>
+        <div class="spotlight-links">
+          <a href="https://neuralmasteryai.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+            <span>Visit NeuralMasteryAI.com</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+          </a>
+          <a href="https://www.youtube.com/@neuralmastery" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+            <span>Subscribe on YouTube (@neuralmastery)</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="videos-heading-sub">
+      <h3 class="sub-title">Featured Video Deep Dives</h3>
+      <a href="https://www.youtube.com/@neuralmastery" target="_blank" rel="noopener noreferrer" class="sub-link">
+        <span>Browse all videos on YouTube</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </a>
+    </div>
+
+    <div class="videos-grid">
+      {videos.map((vid) => (
+        <article class="video-card card">
+          <div class="video-embed-container">
+            <iframe
+              src={`https://www.youtube-nocookie.com/embed/${vid.id}`}
+              title={vid.title}
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              class="video-iframe"
+            ></iframe>
+          </div>
+          <div class="video-content">
+            <h4 class="video-title">{vid.title}</h4>
+            <p class="video-desc">{vid.description}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .blog-spotlight {
+    margin-bottom: 3rem;
+    background: linear-gradient(135deg, var(--surface) 0%, var(--bg-subtle) 100%);
+    border: 1px solid var(--accent-border);
+  }
+  .spotlight-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.875rem;
+  }
+  .spotlight-title {
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: var(--text-main);
+  }
+  .spotlight-text {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+    max-width: 800px;
+  }
+  .spotlight-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.875rem;
+    margin-top: 0.5rem;
+  }
+  .videos-heading-sub {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  .sub-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--text-main);
+  }
+  .sub-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--accent);
+  }
+  .sub-link:hover {
+    color: var(--accent-hover);
+  }
+  .videos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+  }
+  @media (max-width: 960px) {
+    .videos-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 640px) {
+    .videos-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .video-card {
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .video-embed-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: #000000;
+  }
+  .video-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  .video-content {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex-grow: 1;
+  }
+  .video-title {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--text-main);
+    line-height: 1.4;
+  }
+  .video-desc {
+    font-size: 0.8125rem;
+    line-height: 1.5;
+    color: var(--text-muted);
+  }
+</style>

@@ -1,0 +1,225 @@
+---
+const experiences = [
+  {
+    role: "AI Engineer",
+    company: "Autonomize AI",
+    period: "Feb 2026 – Present",
+    location: "Bengaluru, India",
+    summary: "Architecting enterprise agentic platforms, knowledge graphs, and clinical reasoning systems for leading U.S. healthcare payers and providers.",
+    bullets: [
+      {
+        title: "Recursive Language Model & Agent Platform",
+        text: "Designed and implemented the Recursive Language Model (RLM) architecture enabling hierarchical reasoning through Master–Sub LLM collaboration; built the orchestration layer on Temporal for scalable, fault-tolerant execution alongside ReAct and Plan-and-Execute workflows."
+      },
+      {
+        title: "Healthcare Benefits Digitization (PoC to Production)",
+        text: "Delivered an automated benefit-extraction PoC for a leading U.S. healthcare payer in 14 days, converting it into a full-scale production system; engineered LLM + Knowledge Graph extraction pipelines adhering to ICD and CPT coding standards."
+      },
+      {
+        title: "Multi-Agent Claims Adjudication (80% Cost Reduction)",
+        text: "Built a multi-agent system reasoning over complex SOP documents that reduced claims adjudication cost by 80%; engineered a Knowledge Graph Generation Agent to convert policy rules into structured decision trees and an Adjudication Agent producing transparent, auditable Approve/Reject/Pend reasoning."
+      },
+      {
+        title: "Clinical Search & Inquiry Classification",
+        text: "Indexed 70,000+ healthcare concepts in Azure AI Search with cross-encoder reranking to convert natural-language queries into logical campaign expressions; developed a ModernBERT classifier handling class imbalance via synthetic generation and oversampling."
+      }
+    ],
+    tech: ["LangGraph", "Temporal", "Knowledge Graphs", "Azure AI Search", "ModernBERT", "Cross-Encoder", "FastAPI", "Python", "ICD/CPT"]
+  },
+  {
+    role: "AI Research Engineer",
+    company: "Boltzmann Labs Pvt Ltd",
+    period: "Jul 2023 – Jan 2026",
+    location: "Bengaluru, India",
+    note: "Previously Deep Learning Research Intern (Nov 2022 – Jun 2023)",
+    summary: "Led research and production deployment of agentic hardware verification workflows, domain-specific LLM fine-tuning, and edge inference optimization.",
+    bullets: [
+      {
+        title: "Agentic Workflow for RTL Verification",
+        text: "Built an LLM agentic workflow that extracts functional intent from IC specifications and generates coverage-aligned test plans with targeted stimulus; integrated directly into Cadence Xcelium UVM flows, significantly accelerating coverage closure."
+      },
+      {
+        title: "Edge Inference Optimization for Battery Management",
+        text: "Trained PyTorch sequential models (RNN/LSTM/GRU) achieving 99% reliability in state-of-charge prediction; applied dynamic quantization achieving 50% model size reduction and 2× lower latency with <1.2% MAPE deviation for real-time edge deployment."
+      },
+      {
+        title: "Domain LLM Fine-Tuning & Specialized RAG",
+        text: "Fine-tuned LLaMA-3.2-1B with LoRA on NVIDIA L40S GPUs for chemically valid crystal structure generation; developed a domain-specific RAG system (LangChain, Mistral API, ChromaDB) for context-aware retrieval across heterogeneous battery research data."
+      },
+      {
+        title: "GPU Microservices & Molecular AI Pipelines",
+        text: "Engineered a GPU-accelerated, Dockerized GROMACS + OpenMM simulation workflow deployed as a FastAPI microservice on AWS EKS (40% faster setup, 30% higher pipeline efficiency); contributed multi-objective ML optimization to Boltchem small-molecule discovery."
+      }
+    ],
+    tech: ["PyTorch", "LLaMA-3.2 (LoRA)", "NVIDIA L40S", "Quantization", "Cadence Xcelium", "FastAPI", "Docker", "AWS EKS", "ChromaDB"]
+  }
+];
+---
+
+<section id="experience" class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">
+        <span>01</span>
+        <span>/</span>
+        <span>Work History</span>
+      </div>
+      <h2 class="section-title">Production Experience</h2>
+      <p class="section-desc">
+        Demonstrated track record of taking complex AI systems from research and rapid proof-of-concept into hardened, high-availability enterprise production.
+      </p>
+    </div>
+
+    <div class="experience-list">
+      {experiences.map((exp) => (
+        <article class="exp-card card">
+          <div class="exp-header">
+            <div class="exp-role-group">
+              <h3 class="exp-role">{exp.role}</h3>
+              <div class="exp-company-group">
+                <span class="exp-company">{exp.company}</span>
+                {exp.note && <span class="exp-note">({exp.note})</span>}
+              </div>
+            </div>
+            <div class="exp-meta">
+              <span class="exp-period">{exp.period}</span>
+              <span class="exp-location">{exp.location}</span>
+            </div>
+          </div>
+
+          <p class="exp-summary">{exp.summary}</p>
+
+          <div class="exp-bullets">
+            {exp.bullets.map((b) => (
+              <div class="bullet-item">
+                <div class="bullet-dot"></div>
+                <div class="bullet-content">
+                  <strong class="bullet-title">{b.title}:</strong>
+                  <span class="bullet-text">{b.text}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div class="exp-tech-chips">
+            {exp.tech.map((t) => (
+              <span class="chip">{t}</span>
+            ))}
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .exp-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  .exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+  @media (max-width: 640px) {
+    .exp-header {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+  .exp-role {
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: var(--text-main);
+    letter-spacing: -0.015em;
+  }
+  .exp-company-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.25rem;
+  }
+  .exp-company {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--accent);
+  }
+  .exp-note {
+    font-size: 0.8125rem;
+    color: var(--text-faint);
+    font-style: italic;
+  }
+  .exp-meta {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+  }
+  @media (max-width: 640px) {
+    .exp-meta {
+      text-align: left;
+    }
+  }
+  .exp-period {
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-main);
+  }
+  .exp-location {
+    font-size: 0.8125rem;
+    color: var(--text-faint);
+  }
+  .exp-summary {
+    font-size: 0.9375rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+  .exp-bullets {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+  }
+  .bullet-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  .bullet-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--accent);
+    margin-top: 0.55rem;
+    flex-shrink: 0;
+  }
+  .bullet-content {
+    font-size: 0.9375rem;
+    line-height: 1.55;
+    color: var(--text-muted);
+  }
+  .bullet-title {
+    color: var(--text-main);
+    font-weight: 600;
+    margin-right: 0.25rem;
+  }
+  .exp-tech-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    padding-top: 1rem;
+    border-top: 1px dashed var(--border);
+  }
+</style>

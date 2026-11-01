@@ -1,0 +1,263 @@
+---
+const links = [
+  {
+    name: "Email",
+    value: "patturiravivarma@gmail.com",
+    href: "mailto:patturiravivarma@gmail.com",
+    badge: "Direct Contact",
+    icon: "mail"
+  },
+  {
+    name: "LinkedIn",
+    value: "linkedin.com/in/ravivarma-patturi",
+    href: "https://linkedin.com/in/ravivarma-patturi",
+    badge: "Professional Profile",
+    icon: "linkedin"
+  },
+  {
+    name: "GitHub",
+    value: "github.com/ravivarmapatturi",
+    href: "https://github.com/ravivarmapatturi",
+    badge: "Open Source Code",
+    icon: "github"
+  },
+  {
+    name: "X (Twitter)",
+    value: "@NeuralMastery",
+    href: "https://x.com/NeuralMastery",
+    badge: "Building in Public",
+    icon: "twitter"
+  }
+];
+---
+
+<section id="contact" class="section">
+  <div class="container">
+    <div class="contact-card card">
+      <div class="contact-header">
+        <div class="section-eyebrow">
+          <span>06</span>
+          <span>/</span>
+          <span>Get in Touch</span>
+        </div>
+        <h2 class="contact-title">Let's build together.</h2>
+        <p class="contact-desc">
+          I am always interested in discussing production agentic systems, on-device edge AI, healthcare AI workflows, or high-impact engineering opportunities.
+        </p>
+      </div>
+
+      <div class="contact-methods">
+        {links.map((link) => (
+          <a
+            href={link.href}
+            target={link.href.startsWith("http") ? "_blank" : undefined}
+            rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
+            class="method-item"
+          >
+            <div class="method-icon-wrap">
+              {link.icon === "mail" && (
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              )}
+              {link.icon === "linkedin" && (
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              )}
+              {link.icon === "github" && (
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+              )}
+              {link.icon === "twitter" && (
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
+                  <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path>
+                </svg>
+              )}
+            </div>
+
+            <div class="method-details">
+              <span class="method-badge">{link.badge}</span>
+              <span class="method-value">{link.value}</span>
+            </div>
+
+            <div class="method-arrow" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <div class="contact-cta-bar">
+        <div class="resume-cta-text">
+          <span class="cta-primary-text">Looking for a comprehensive PDF summary?</span>
+          <span class="cta-secondary-text">Updated October 2026 with production metrics and engineering outcomes.</span>
+        </div>
+        <a
+          href="/assets/pdf/Ravivarma_Patturi_Resume.pdf"
+          class="btn btn-primary"
+          download="Ravivarma_Patturi_Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          <span>Download Résumé (PDF)</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .contact-card {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    background: linear-gradient(135deg, var(--surface) 0%, var(--bg-subtle) 100%);
+    border: 1px solid var(--accent-border);
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  @media (max-width: 640px) {
+    .contact-card {
+      padding: 1.5rem 1rem;
+      gap: 1.75rem;
+    }
+  }
+  .contact-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .contact-title {
+    font-size: 2.25rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--text-main);
+  }
+  @media (max-width: 640px) {
+    .contact-title {
+      font-size: 1.75rem;
+    }
+  }
+  .contact-desc {
+    font-size: 1.0625rem;
+    color: var(--text-muted);
+    max-width: 700px;
+    line-height: 1.6;
+  }
+  .contact-methods {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    width: 100%;
+  }
+  @media (max-width: 768px) {
+    .contact-methods {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 0.875rem;
+    }
+  }
+  .method-item {
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+    padding: 1rem 1.125rem;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    transition: all 0.15s ease-in-out;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  .method-item:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+  .method-icon-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.375rem;
+    height: 2.375rem;
+    border-radius: var(--radius-md);
+    background-color: var(--accent-light);
+    color: var(--accent);
+    flex-shrink: 0;
+  }
+  .method-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+    flex-grow: 1;
+    min-width: 0;
+    overflow: hidden;
+  }
+  .method-badge {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-faint);
+  }
+  .method-value {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-main);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+  }
+  .method-arrow {
+    color: var(--text-faint);
+    transition: transform 0.15s ease, color 0.15s ease;
+    flex-shrink: 0;
+  }
+  .method-item:hover .method-arrow {
+    color: var(--accent);
+    transform: translate(2px, -2px);
+  }
+  .contact-cta-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding-top: 1.75rem;
+    border-top: 1px solid var(--border);
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .resume-cta-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    min-width: 0;
+  }
+  .cta-primary-text {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-main);
+  }
+  .cta-secondary-text {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+  }
+</style>

@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import ImpactStrip from '../components/ImpactStrip.astro';
+import Experience from '../components/Experience.astro';
+import Building from '../components/Building.astro';
+import Projects from '../components/Projects.astro';
+import WritingVideos from '../components/WritingVideos.astro';
+import Skills from '../components/Skills.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout>
+  <Header slot="header" />
+  <Hero />
+  <ImpactStrip />
+  <Experience />
+  <Building />
+  <Projects />
+  <WritingVideos />
+  <Skills />
+  <Contact />
+  <Footer slot="footer" />
+</BaseLayout>

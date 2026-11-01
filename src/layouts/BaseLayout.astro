@@ -1,0 +1,113 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  ogImage?: string;
+}
+
+const {
+  title = "Ravivarma Patturi — AI Engineer | Production Agentic Systems & Edge Inference",
+  description = "AI/ML Engineer with 4 years shipping production GenAI, multi-agent systems, and edge inference. Built automated claims adjudication (80% cost reduction), 14-day healthcare PoC-to-prod, Neural Mastery, and InferEdge AI.",
+  ogImage = "https://ravivarmapatturi.github.io/og-image.png"
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || "https://ravivarmapatturi.github.io");
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Ravivarma Patturi",
+  "jobTitle": "AI Engineer",
+  "url": "https://ravivarmapatturi.github.io",
+  "image": "https://ravivarmapatturi.github.io/assets/img/PROFILE.png",
+  "email": "mailto:patturiravivarma@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Bengaluru",
+    "addressCountry": "India"
+  },
+  "sameAs": [
+    "https://github.com/ravivarmapatturi",
+    "https://linkedin.com/in/ravivarma-patturi",
+    "https://x.com/NeuralMastery",
+    "https://huggingface.co/ravivarmapatturi",
+    "https://www.youtube.com/@neuralmastery",
+    "https://neuralmasteryai.com",
+    "https://inferedgeai.com"
+  ],
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Autonomize AI"
+  },
+  "knowsAbout": [
+    "Generative AI",
+    "Agentic Systems",
+    "Large Language Models",
+    "Retrieval-Augmented Generation",
+    "Edge AI Inference",
+    "Deep Learning",
+    "Healthcare AI"
+  ]
+};
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="profile" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:site_name" content="Ravivarma Patturi" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@NeuralMastery" />
+    <meta name="twitter:creator" content="@NeuralMastery" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- Google Fonts Preconnect & Stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
+
+    <!-- Inline Theme Initializer (prevents FOUC) -->
+    <script is:inline>
+      (function() {
+        try {
+          const stored = localStorage.getItem('theme');
+          if (stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+          } else {
+            document.documentElement.removeAttribute('data-theme');
+          }
+        } catch (_) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-to-content">Skip to content</a>
+    <slot name="header" />
+    <main id="main-content">
+      <slot />
+    </main>
+    <slot name="footer" />
+  </body>
+</html>

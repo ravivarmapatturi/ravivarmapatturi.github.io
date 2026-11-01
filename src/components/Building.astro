@@ -1,0 +1,189 @@
+---
+const ventures = [
+  {
+    title: "InferEdge AI · VaayuEdge",
+    tag: "On-Device Inference",
+    sentence: "Building ultra-efficient on-device multimodal inference; VaayuEdge runs English→Telugu speech translation client-side in the browser with zero cloud roundtrips.",
+    link: "https://inferedgeai.com/vaayuedge/",
+    linkLabel: "Try VaayuEdge Demo",
+    image: "/assets/img/building/inferedge.png",
+    imageAlt: "VaayuEdge on-device speech-to-speech translation interface"
+  },
+  {
+    title: "Neural Mastery",
+    tag: "Interactive Learning Platform",
+    sentence: "Self-built AI engineering platform featuring 1,800+ pages of deep learning, GenAI, and agentic curricula with in-browser Python execution and visual labs.",
+    link: "https://neuralmasteryai.com",
+    linkLabel: "Explore Platform",
+    image: "/assets/img/building/neuralmastery.png",
+    imageAlt: "Neural Mastery interactive deep learning platform homepage"
+  },
+  {
+    title: "Hugging Face Models",
+    tag: "Research Checkpoints",
+    sentence: "Published fine-tuned IndicTrans2 English→Telugu research checkpoints optimized for specialized domain vocabulary and low-resource dialect translation.",
+    link: "https://huggingface.co/ravivarmapatturi",
+    linkLabel: "View Checkpoints",
+    image: "/assets/img/building/huggingface.png",
+    imageAlt: "Hugging Face profile for Ravivarma Patturi showing model repositories"
+  },
+  {
+    title: "Neural Mastery on YouTube",
+    tag: "Technical Education",
+    sentence: "Companion video series breaking down machine learning foundations, backpropagation, and agentic workflows in Telugu and English for an engaged engineering community.",
+    link: "https://www.youtube.com/@neuralmastery",
+    linkLabel: "Watch on YouTube",
+    image: "/assets/img/building/youtube.jpg",
+    imageAlt: "Neural Mastery YouTube channel video presentation on machine learning"
+  }
+];
+---
+
+<section id="building" class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">
+        <span>02</span>
+        <span>/</span>
+        <span>Independent Work</span>
+      </div>
+      <h2 class="section-title">What I'm Building</h2>
+      <p class="section-desc">
+        Beyond enterprise engineering, I build in public across edge inference, technical platforms, open research models, and engineering education.
+      </p>
+    </div>
+
+    <div class="building-grid">
+      {ventures.map((item) => (
+        <article class="building-card card">
+          <a href={item.link} target="_blank" rel="noopener noreferrer" class="building-image-link" tabindex="-1" aria-hidden="true">
+            <div class="image-frame">
+              <img
+                src={item.image}
+                alt={item.imageAlt}
+                width="600"
+                height="338"
+                loading="lazy"
+                decoding="async"
+                class="building-img"
+              />
+            </div>
+          </a>
+
+          <div class="building-content">
+            <div class="building-header">
+              <span class="badge">{item.tag}</span>
+              <h3 class="building-title">
+                <a href={item.link} target="_blank" rel="noopener noreferrer" class="title-link">
+                  {item.title}
+                </a>
+              </h3>
+            </div>
+
+            <p class="building-sentence">{item.sentence}</p>
+
+            <div class="building-footer">
+              <a href={item.link} target="_blank" rel="noopener noreferrer" class="link-action">
+                <span>{item.linkLabel}</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .building-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  @media (max-width: 820px) {
+    .building-grid {
+      grid-template-columns: 1fr;
+      gap: 1.75rem;
+    }
+  }
+  .building-card {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+  }
+  .building-image-link {
+    display: block;
+    overflow: hidden;
+    background-color: var(--bg-subtle);
+    border-bottom: 1px solid var(--border);
+  }
+  .image-frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+  }
+  .building-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: transform 0.3s ease;
+  }
+  .building-card:hover .building-img {
+    transform: scale(1.025);
+  }
+  .building-content {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    flex-grow: 1;
+  }
+  .building-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+  .building-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+    color: var(--text-main);
+  }
+  .title-link:hover {
+    color: var(--accent);
+  }
+  .building-sentence {
+    font-size: 0.9375rem;
+    line-height: 1.55;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+  }
+  .building-footer {
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+  }
+  .link-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--accent);
+    transition: gap 0.15s ease;
+  }
+  .link-action:hover {
+    color: var(--accent-hover);
+    gap: 0.5rem;
+  }
+</style>
