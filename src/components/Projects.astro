@@ -6,8 +6,8 @@ const projects = [
     badge: "Enterprise RAG",
     github: "https://github.com/ravivarmapatturi/qa_rag_application",
     problem: "Regulatory compliance and policy documents are dense and complex. Generic search tools often return fragmented clauses or hallucinated answers, creating significant compliance risks.",
-    approach: "Architected a production-ready conversational RAG assistant using GPT-4o. Integrated dense vector search with sparse BM25 retrieval (hybrid retrieval), cross-encoder reranking, intelligent query rewriting, and conversation memory. Fully containerized with Docker for Kubernetes deployment.",
-    result: "Delivers sub-second, highly factual query resolution with source attribution and citations, eliminating manual document scanning time.",
+    approach: "Architected a production-ready conversational RAG assistant using GPT-4o. Combined dense vector search with sparse BM25 retrieval (hybrid retrieval), query rewriting and memory-augmented context. Fully containerized with Docker for Kubernetes deployment.",
+    result: "A containerized assistant, deployed on Kubernetes, that answers questions over regulatory documents from retrieved passages instead of from the model's memory.",
     tech: ["Python", "GPT-4o", "LangChain", "Hybrid Retrieval", "Docker", "Kubernetes", "Vector DB"]
   },
   {
@@ -17,7 +17,7 @@ const projects = [
     github: "https://github.com/ravivarmapatturi/Finance_Agent",
     problem: "Synthesizing quarterly financial disclosures, SEC filings, and competitor metrics is an exhaustive manual undertaking that delays strategic investment reporting.",
     approach: "Designed a multi-agent workflow orchestrated with LangGraph and OpenAI. Implemented specialized agents for financial statement extraction, web-scale competitive benchmarking via Tavily Search, and structured narrative generation, wrapped in a Streamlit UI with human-in-the-loop review.",
-    result: "Automated end-to-end financial analysis reports with competitor comparison charts and iterative narrative refinement in seconds.",
+    result: "Turns an uploaded CSV of company financials into a narrative report with competitor benchmarks, refined through user feedback in a Streamlit UI.",
     tech: ["LangGraph", "OpenAI", "Tavily Search", "Streamlit", "Pandas", "Python"]
   },
   {
@@ -27,7 +27,7 @@ const projects = [
     github: "https://github.com/ravivarmapatturi/Traffic_Volume_Prediction_Hackathon",
     problem: "Predicting municipal traffic congestion requires capturing complex cyclical patterns influenced by severe weather changes, irregular holiday calendars, and sudden peak events.",
     approach: "Engineered high-signal spatio-temporal features, cyclic time encodings, and weather interaction variables. Developed an ensemble XGBoost model tuned with stratified cross-validation and hyperparameter optimization.",
-    result: "Secured a Top 10 national ranking among hundreds of data science competitors at the MachineHack Great Indian Hackathon 2024.",
+    result: "Placed in the Top 10 of the MachineHack Great Indian Hackathon 2024.",
     tech: ["XGBoost", "Scikit-Learn", "Feature Engineering", "Pandas", "NumPy"]
   },
   {
@@ -37,9 +37,9 @@ const projects = [
     github: "https://github.com/ravivarmapatturi/NeuralMastery",
     demo: "https://neuralmasteryai.com",
     problem: "Most AI learners face friction between theoretical lectures and practical code verification, lacking immediate in-browser execution or visual intuition.",
-    approach: "Built a modern interactive education platform featuring 1,800+ curriculum pages, in-browser client-side Python execution via PyScript/WebAssembly, interactive visual labs, and automated progress tracking.",
-    result: "Created a scalable self-learning platform educating thousands of engineers on deep learning, transformer internals, and agentic workflows.",
-    tech: ["Python", "PyScript", "WebAssembly", "TypeScript", "Educational Labs"]
+    approach: "Built a modern interactive education platform featuring 1,800+ curriculum pages, in-browser Python execution via Pyodide (WebAssembly), interactive visual labs, progress tracking and a community leaderboard.",
+    result: "A live, free platform at neuralmasteryai.com with interactive visualizations, coding labs, interview practice and a companion YouTube channel.",
+    tech: ["React", "TypeScript", "Vite", "Pyodide", "MDX"]
   }
 ];
 ---

@@ -70,14 +70,10 @@ const videos = [
       {videos.map((vid) => (
         <article class="video-card card">
           <div class="video-embed-container">
-            <iframe
-              src={`https://www.youtube-nocookie.com/embed/${vid.id}`}
-              title={vid.title}
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-              class="video-iframe"
-            ></iframe>
+            <a href={`https://www.youtube.com/watch?v=${vid.id}`} target="_blank" rel="noopener noreferrer" class="video-thumb-link" aria-label={`Watch on YouTube: ${vid.title}`}>
+              <img src={`https://i.ytimg.com/vi/${vid.id}/hqdefault.jpg`} alt="" loading="lazy" width="480" height="360" class="video-iframe" />
+              <span class="video-play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+            </a>
           </div>
           <div class="video-content">
             <h4 class="video-title">{vid.title}</h4>
@@ -169,6 +165,12 @@ const videos = [
     aspect-ratio: 16 / 9;
     background-color: #000000;
   }
+  .video-thumb-link { position: absolute; inset: 0; display: block; }
+  .video-thumb-link:focus-visible { outline: 3px solid var(--color-accent, currentColor); outline-offset: -3px; }
+  .video-iframe { object-fit: cover; }
+  .video-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 56px; height: 56px; border-radius: 50%; background: rgba(0, 0, 0, 0.72); color: #fff; display: grid; place-items: center; transition: transform .15s ease; }
+  .video-thumb-link:hover .video-play { transform: translate(-50%, -50%) scale(1.08); }
+  @media (prefers-reduced-motion: reduce) { .video-play { transition: none; } }
   .video-iframe {
     position: absolute;
     top: 0;

@@ -11,9 +11,5 @@
   "dependencies": {
     "@astrojs/sitemap": "^3.2.1",
     "astro": "^7.4.1"
-  },
-  "devDependencies": {
-    "lighthouse": "^13.6.0",
-    "puppeteer": "^24.4.0"
   }
 }
