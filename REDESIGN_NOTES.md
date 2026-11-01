@@ -1,149 +1,159 @@
-# Rebuild & Verification Notes: ravivarmapatturi.github.io
+# Rebuild Notes: ravivarmapatturi.github.io
 
-Rebuild executed according to `AGY_BRIEF_PORTFOLIO.md` on branch `redesign-2026`.
+Rebuilt as a recruiter-grade, high-performance personal portfolio site on branch `redesign-2026`.
 
 ---
 
-## 1. Summary of What Was Built
+## 1. Executive Summary
 
-The legacy al-folio Jekyll template was completely replaced with a high-performance **Astro (static output) + vanilla CSS** architecture.
+- **Objective**: Rebuild personal site so a technical recruiter or engineering hiring manager immediately understands who Ravivarma is (AI/ML Engineer shipping production GenAI/agentic systems and building edge AI in public) and can reach out or review his work within seconds.
+- **Tech Stack**: [Astro](https://astro.build/) (Static Site Generation), vanilla CSS with design tokens, zero external CSS/JS runtime dependencies, zero analytics/trackers.
+- **Outcome**:
+  - `npm ci && npm run build` cleanly exits `0` in ~1 second.
+  - All local endpoints and static assets return `200 OK`.
+  - Zero horizontal overflow at `375px` viewport.
+  - Full-page responsive screenshots (375px & 1440px, light & dark) saved to `redesign-shots/`.
+  - **Lighthouse Scores**: Performance: **99**, Accessibility: **100**, Best Practices: **100**, SEO: **100**.
 
-### Sections Built
-1. **Hero**:
-   - Header with monogram brand (`RP`), navigation links, mobile menu drawer, and light/dark theme toggle.
-   - Status badge: `"AI/ML Engineer · 4 Years Experience · Bengaluru, India"`.
-   - Name and exact positioning: `"AI Engineer: production agentic systems & edge inference"`.
-   - Clear value narrative focusing on production GenAI, multi-agent systems for US healthcare, and on-device edge AI.
-   - 2 primary CTAs:
-     - `"Hire / Contact"` (smooth scroll to `#contact`)
-     - `"Download résumé"` (downloads `/assets/pdf/Ravivarma_Patturi_Resume.pdf`)
-   - Profile photo reusing `assets/img/PROFILE.png` with role badge.
-   - Quick direct links to email, LinkedIn, and GitHub.
-2. **Impact Strip**:
-   - 4 real metrics verified directly against the resume:
-     - **14 Days**: PoC to production for US healthcare benefits digitization.
-     - **80%**: Lower claims adjudication cost via SOP Reasoner multi-agent system.
+---
+
+## 2. What Was Built
+
+### Core Sections
+1. **Header & Navigation (`src/components/Header.astro`)**:
+   - Monogram brand identity (`RP`), sticky backdrop blur header.
+   - Smooth navigation links to `#experience`, `#building`, `#projects`, `#writing-videos`, `#skills`, and `#contact`.
+   - Theme toggle button supporting light and dark themes with localStorage persistence and system preference fallback.
+   - Accessible mobile drawer menu with ARIA state management.
+
+2. **Hero (`src/components/Hero.astro`)**:
+   - Status badge: *"AI/ML Engineer · 4 Years Experience · Bengaluru, India"*.
+   - Positioning statement: *"AI Engineer: production agentic systems & edge inference"*.
+   - High-impact positioning summary explaining enterprise healthcare delivery alongside public inference engineering.
+   - Primary CTAs: *"Hire / Contact"* (smooth scroll to contact) and *"Download résumé"* (direct PDF link to `/assets/pdf/Ravivarma_Patturi_Resume.pdf`).
+   - Profile photograph (`/assets/img/PROFILE.png`) with verified badge (*"Current: AI Engineer @ Autonomize AI"*).
+
+3. **Impact Strip (`src/components/ImpactStrip.astro`)**:
+   - 4 verifiable metrics extracted from production deliverables:
+     - **14 Days**: PoC to full production project for a leading U.S. healthcare organization.
+     - **80%**: Lower claims adjudication cost via multi-agent SOP reasoning.
      - **70,000+**: Healthcare concepts indexed in Azure AI Search with cross-encoder reranking.
-     - **2× Faster / 50% Smaller**: Quantized deep sequential models for real-time edge battery management (<1.2% MAPE deviation).
-3. **Experience**:
-   - **Autonomize AI** (Feb 2026 – Present): 4 outcome-first bullets covering Genesis AI Studio & Recursive Language Model (RLM) architecture on Temporal, 14-day healthcare benefits digitization (ICD/CPT), SOP Reasoner multi-agent claims adjudication (80% cost reduction), and clinical semantic search with ModernBERT inquiry classification.
-   - **Boltzmann Labs Pvt Ltd** (Jul 2023 – Jan 2026; including DL intern Nov 2022 – Jun 2023): 4 outcome-first bullets covering agentic RTL verification for Cadence Xcelium, PyTorch sequential battery modeling (99% reliability) and edge quantization, domain RAG & LLaMA-3.2-1B LoRA fine-tuning on NVIDIA L40S GPUs, and GPU-accelerated GROMACS + OpenMM FastAPI microservice on AWS EKS.
-4. **What I'm Building**:
-   - **InferEdge AI / VaayuEdge**: In-browser English→Telugu speech translation with zero cloud server costs.
-   - **Neural Mastery**: Interactive AI engineering platform with 1,800+ lessons, in-browser Python runtime, and visual labs.
-   - **Hugging Face Research Models**: Fine-tuned IndicTrans2 English→Telugu checkpoints and ONNX edge inference pipelines (explicitly labeled as research checkpoints).
-   - **Neural Mastery on YouTube**: Technical video series on LLM architectures, evaluation metrics, and backpropagation mathematics.
-5. **Selected Projects**:
-   - `qa_rag_application`: Modular RAG sandbox with 5 parsers, 4 chunkers, hybrid BM25 + dense Chroma retrieval, cross-encoder reranking, and agentic CRAG/GraphRAG routing.
-   - `Finance_Agent`: Autonomous financial reporting agent orchestrated with LangGraph state machine, explicit competitor search loop via Tavily, and LLM self-critique.
-   - `Traffic_Volume_Prediction_Hackathon`: MachineHack Great Indian Hiring Hackathon 2024 Top 10 finish using cyclical trigonometric features and RFECV with CatBoost/XGBoost.
-   - `NeuralMastery`: Full-stack educational platform built with Docusaurus, in-browser Python execution, and visual interactive playgrounds.
-   - Each project structured with clear **Problem → Approach → Result**, tech chips, and GitHub links.
-6. **Writing & Videos**:
-   - 3 real YouTube videos embedded via privacy-preserving `youtube-nocookie.com` with real video IDs:
-     - `_C7DZY1BUpM` (LLMs Architecture & Foundations)
-     - `UlahrrEk9Ns` (Machine Learning Evaluation Metrics)
-     - `UgBqCyuCQKw` (Backward Propagation from First Principles)
-   - Prominent banner linking to the Neural Mastery engineering blog (`https://neuralmasteryai.com/blog/`).
-7. **Skills**:
-   - Categorized into 4 discrete engineering domains:
-     - **GenAI & Agentic Systems**
-     - **Machine Learning & Deep Learning**
-     - **Inference & Edge AI**
-     - **Backend & MLOps Infrastructure**
-   - Strictly no progress bars or percentages.
-8. **Contact**:
-   - Direct contact channels: Email (`mailto:patturiravivarma@gmail.com`), LinkedIn, GitHub, X (`@NeuralMastery`).
-   - One-click copy email button with clipboard confirmation.
-   - Secondary résumé download CTA.
-   - **Phone number is never displayed.**
-   - No backend form dependencies.
+     - **2× Faster / 50% Smaller**: Quantized deep sequential models (<1.2% MAPE deviation) for real-time edge battery management.
 
-### Technical & Design Implementation
-- **Static Output**: Pre-rendered HTML/CSS with Astro 7.
-- **Plain CSS**: Modern custom properties, responsive grid/flexbox, zero framework bloat.
-- **Theming**: Dark and light modes with system preference auto-detection, zero-flash inline script in `<head>`, and manual theme switch button.
-- **Accessibility & Performance**:
-  - Skip-to-content accessible link.
-  - Semantic HTML landmarks (`<header>`, `<main>`, `<section>`, `<article>`, `<footer>`, `<nav>`).
-  - High contrast ratios adhering to WCAG AAA standards.
-  - Full `@media (prefers-reduced-motion: reduce)` support.
-- **SEO & Metadata**:
-  - Open Graph preview image (`/og-image.png`).
-  - Schema.org `Person` JSON-LD with verified social profiles and job credentials.
-  - Canonical URL (`https://ravivarmapatturi.github.io/`).
-  - Generated dynamic sitemap (`/sitemap-index.xml` and `/sitemap-0.xml`).
-  - Valid `robots.txt`.
-  - Monogram SVG favicon (`/favicon.svg`).
-- **Deployment**: `.github/workflows/deploy.yml` configured to build and deploy to GitHub Pages on pushes to `main`.
+4. **Experience (`src/components/Experience.astro`)**:
+   - **Autonomize AI** (*Feb 2026 – Present*, AI Engineer):
+     - Recursive Language Model (RLM) master-sub LLM reasoning architecture on Temporal.
+     - Healthcare benefits digitization pipeline (ICD, CPT standards).
+     - SOP Reasoner multi-agent claims adjudication system (80% cost reduction).
+     - Clinical NLP semantic search and ModernBERT inquiry classification.
+   - **Boltzmann Labs Pvt Ltd** (*Jul 2023 – Jan 2026*, AI Research Engineer; *Nov 2022 – Jun 2023*, DL Research Intern):
+     - LLM agentic RTL verification workflow integrated with Cadence Xcelium UVM.
+     - Edge battery management RNN/LSTM/GRU inference quantization (2× lower latency, 50% smaller size).
+     - Domain-specific RAG and LLaMA-3.2-1B fine-tuning with LoRA on NVIDIA L40S GPUs.
+     - GPU-accelerated Dockerized molecular simulation microservices on AWS EKS.
+
+5. **What I'm Building (`src/components/Building.astro`)**:
+   - **InferEdge AI · VaayuEdge**: On-device multimodal inference; English→Telugu speech translation running fully client-side in the browser.
+   - **Neural Mastery**: 1,800+ page AI engineering platform with in-browser Python execution and visual labs.
+   - **Hugging Face Checkpoints**: Fine-tuned IndicTrans2 English→Telugu research checkpoints.
+   - **Neural Mastery on YouTube**: Technical video deep dives on machine learning foundations and agentic systems.
+
+6. **Selected Projects (`src/components/Projects.astro`)**:
+   - Structured *Problem → Approach → Result* format with technology chips and direct GitHub links:
+     - `qa_rag_application`: Regulatory QA RAG Chatbot (GPT-4o, hybrid retrieval, query rewriting, Kubernetes).
+     - `Finance_Agent`: Financial Performance Reporting Agent (LangGraph, Tavily Search, Streamlit).
+     - `Traffic_Volume_Prediction_Hackathon`: Municipal Traffic Forecasting (Top 10 MachineHack 2024, XGBoost).
+     - `NeuralMastery`: Neural Mastery Platform Engine (Interactive education platform & OSS).
+
+7. **Writing & Videos (`src/components/WritingVideos.astro`)**:
+   - Spotlight card linking to Neural Mastery interactive platform (`https://neuralmasteryai.com`).
+   - 3 real YouTube videos embedded using `youtube-nocookie.com`:
+     - `UlahrrEk9Ns`: *Introduction to Evaluation Metrics in Telugu | Machine Learning*
+     - `UgBqCyuCQKw`: *Backward Propagation in Telugu | Deep Learning*
+     - `EXP_3C7me_k`: *Normalization vs Standardization in Telugu | Machine Learning*
+
+8. **Skills (`src/components/Skills.astro`)**:
+   - Grouped into 4 technical categories without ungrounded progress bars:
+     - *GenAI & Agentic Systems*
+     - *Machine Learning & Deep Learning*
+     - *Inference & Edge AI*
+     - *Backend & MLOps Infrastructure*
+
+9. **Contact & Footer (`src/components/Contact.astro`, `src/components/Footer.astro`)**:
+   - Direct email mailto (`patturiravivarma@gmail.com`).
+   - Social & technical links: LinkedIn, GitHub, X (`@NeuralMastery`).
+   - Strict privacy: **Phone number omitted completely**.
+   - No third-party backend contact form dependencies.
+
+10. **Infrastructure & Deployment**:
+    - Clean GitHub Pages workflow configured in `.github/workflows/deploy.yml`.
+    - Complete removal of obsolete al-folio Jekyll files, ruby gems, and unused template assets.
 
 ---
 
-## 2. Source Material & Verification Log
+## 3. Fact Sourcing & Verification Table
 
-Every piece of information was verified against primary sources:
-
-| Fact / Detail | Source | Verification |
-|---|---|---|
-| Roles, Employment Dates, Titles | `/home/ravivarma/Documents/DREAM_PROJECT/RAVIVARMA_PATTURI_RESUME_OCT_2026.pdf` | Extracted via `pdftotext` (Autonomize AI: Feb 2026–Present; Boltzmann Labs: Jul 2023–Jan 2026) |
-| Impact Metrics (14 days, 80%, 70K+, 2×/50%) | Resume PDF | Extracted verbatim from experience section |
-| Education & Degree | Resume PDF | B.Tech ECE, RGUKT (CGPA 9.0, 2019–2023) |
-| Contact Information | Resume PDF & Brief | Email: `patturiravivarma@gmail.com`, LinkedIn: `in/ravivarma-patturi`, X: `@NeuralMastery`, GitHub: `ravivarmapatturi`. Phone number deliberately excluded per brief. |
-| InferEdge AI & VaayuEdge | `https://inferedgeai.com/` & `https://inferedgeai.com/vaayuedge/` | Verified live HTTP 200, in-browser English→Telugu translation product, captured screenshot |
-| Neural Mastery Platform | `https://neuralmasteryai.com/` & `/blog/` | Verified live HTTP 200, 1,800+ learning pages, captured screenshot |
-| Hugging Face Models | `https://huggingface.co/api/models?author=ravivarmapatturi` | Verified models: `inferedge-indictrans2-en-te-1000steps-v1`, `inferedge-indictrans2-en-te-100steps-v1`, `vayyuedge-opus-mt-en-dra-onnx`, `vayyuedge-mms-tts-tel-onnx`, `inferedge-opus-en-te-100steps-research-v1` |
-| YouTube Video IDs | `https://www.youtube.com/@neuralmastery` | Verified video IDs: `_C7DZY1BUpM`, `UlahrrEk9Ns`, `UgBqCyuCQKw` |
-| Flagship Codebases | GitHub API & repository READMEs | Inspected architectures for `qa_rag_application`, `Finance_Agent`, `Traffic_Volume_Prediction_Hackathon`, and `NeuralMastery` |
-
-### Unverified Claims
-- None. All information incorporated into the portfolio is directly anchored in verified sources.
+| Fact / Statement | Source | Status |
+| :--- | :--- | :--- |
+| Roles & Titles: AI Engineer at Autonomize AI (Feb 2026–Present), AI Research Engineer at Boltzmann Labs (Jul 2023–Jan 2026) | Resume (`RAVIVARMA_PATTURI_RESUME_OCT_2026.pdf`) | **Verified** |
+| Education: B.Tech ECE from RGUKT (CGPA 9.0, 2019–2023) | Resume | **Verified** |
+| Metric: "PoC to production in 14 days" (Benefits Digitization) | Resume (Autonomize AI section) | **Verified** |
+| Metric: "80% lower adjudication cost" (SOP Reasoner) | Resume (Autonomize AI section) | **Verified** |
+| Metric: "70,000+ concepts indexed in Azure AI Search" | Resume (Autonomize AI section) | **Verified** |
+| Metric: "2× lower latency, 50% smaller model, <1.2% MAPE" | Resume (Boltzmann Labs section) | **Verified** |
+| Top 10 MachineHack Great Indian Hackathon 2024 | Resume & GitHub repo `Traffic_Volume_Prediction_Hackathon` | **Verified** |
+| InferEdge AI & VaayuEdge (on-device speech translation) | Brief & `https://inferedgeai.com/vaayuedge/` | **Verified** |
+| Neural Mastery (1,800+ pages, in-browser Python) | Brief & `https://neuralmasteryai.com` | **Verified** |
+| Hugging Face checkpoints (`IndicTrans2` English→Telugu) | Brief & `https://huggingface.co/ravivarmapatturi` (labeled as research checkpoints) | **Verified** |
+| YouTube Video IDs: `UlahrrEk9Ns`, `UgBqCyuCQKw`, `EXP_3C7me_k` | YouTube Channel `@neuralmastery` verified via API | **Verified** |
+| Profile photo | Reused from existing repository (`public/assets/img/PROFILE.png`) | **Verified** |
+| Resume PDF | Copied from `/home/ravivarma/Documents/DREAM_PROJECT/RAVIVARMA_PATTURI_RESUME_OCT_2026.pdf` to `public/assets/pdf/Ravivarma_Patturi_Resume.pdf` | **Verified** |
 
 ---
 
-## 3. Definition of Done Checklist
+## 4. Quality & Performance Verification Results
 
-### 1. Build Verification
-```bash
-npm ci && npm run build
+### Build Verification
+```text
+$ npm ci && npm run build
+
+> ravivarmapatturi-portfolio@1.0.0 build
+> astro build
+
+[build] output: "static"
+[build] mode: "static"
+[build] Complete in 888ms!
 ```
-- **Result**: Exit code 0.
-- Clean static export generated in `dist/`.
+Exit code: `0`.
 
-### 2. Local Link & Preview Verification
-Served via `npx astro preview` and verified via automated test script (`scripts/check-links.mjs`):
-- `[PASS 200] /favicon.svg`
-- `[PASS 200] /_astro/index.DjJEqOHj.css`
-- `[PASS 200] /assets/pdf/Ravivarma_Patturi_Resume.pdf`
-- `[PASS 200] /assets/img/PROFILE.png`
-- `[PASS 200] /assets/img/building/inferedge.png`
-- `[PASS 200] /assets/img/building/neuralmastery.png`
-- `[PASS 200] /assets/img/building/huggingface.png`
-- `[PASS 200] /assets/img/building/youtube.jpg`
-- `[PASS 200] /robots.txt`
-- `[PASS 200] /sitemap-index.xml`
-- `[PASS 200] /sitemap-0.xml`
-- **Result**: All local links returned 200 OK.
+### Local Link Check
+Verified through automated link resolution against all generated routes:
+- `/` -> **200 OK**
+- `/assets/pdf/Ravivarma_Patturi_Resume.pdf` -> **200 OK**
+- `/assets/img/PROFILE.png` -> **200 OK**
+- `/assets/img/building/inferedge.png` -> **200 OK**
+- `/assets/img/building/neuralmastery.png` -> **200 OK**
+- `/assets/img/building/huggingface.png` -> **200 OK**
+- `/assets/img/building/youtube.jpg` -> **200 OK**
+- `/favicon.svg` -> **200 OK**
+- `/og-image.png` -> **200 OK**
+- `/robots.txt` -> **200 OK**
+- `/sitemap-index.xml` -> **200 OK**
+- `/sitemap-0.xml` -> **200 OK**
 
-### 3. Responsive Screenshots
-Saved to `redesign-shots/` (gitignored):
-- `screenshot-1440px-light.png`
-- `screenshot-1440px-dark.png`
-- `screenshot-375px-light.png`
-- `screenshot-375px-dark.png`
-- **Result**: Zero horizontal overflow at 375px mobile viewport.
+### Mobile Responsive Audit (375px)
+- Viewport width: `375px`
+- Document `scrollWidth`: `375px`
+- Horizontal scroll: **None (0px overflow)**
 
-### 4. Lighthouse Scores
-Audited against local production preview server using Lighthouse 13.6:
-| Category | Score | Brief Requirement | Status |
-|---|:---:|:---:|:---:|
-| **Performance** | **99** | ≥ 95 | PASS |
-| **Accessibility** | **100** | ≥ 95 | PASS |
-| **Best Practices** | **100** | ≥ 95 | PASS |
-| **SEO** | **100** | ≥ 95 | PASS |
+### Lighthouse Audit Scores
+- **Performance**: `99`
+- **Accessibility**: `100`
+- **Best Practices**: `100`
+- **SEO**: `100`
 
----
-
-## 4. Git Branching & Submission
-- Work conducted strictly on branch `redesign-2026`.
-- Main branch untouched; no direct pushes to `main`.
-- Ready for Claude Code review and merge.
+### Generated Screenshots (`redesign-shots/`)
+- `375px-light.png`: Mobile view in light mode.
+- `375px-dark.png`: Mobile view in dark mode.
+- `1440px-light.png`: Desktop view in light mode.
+- `1440px-dark.png`: Desktop view in dark mode.
